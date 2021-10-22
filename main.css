@@ -1,25 +1,26 @@
 @font-face {
-    font-family: Gilroy-Light;
-    src: url("fonts/Gilroy-Light.otf") format("opentype");
+    font-family: Gilroy-Medium;
+    src: url("fonts/Gilroy-medium.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: Gilroy-ExtraBold;
+    font-family: Gilroy-Bold;
     font-weight: bold;
-    src: url("fonts/Gilroy-ExtraBold.otf") format("opentype");
+    src: url("fonts/Gilroy-bold.woff2") format("woff2");
 }
 *{
+    text-align: center;
     margin: 0;
     padding: 0;
 }
 :root {
-    --black-color: #70707;
+    --black-color: #070707;;
   }
 header{
     padding: 0 200px;
 }
 nav a{
-    font-family: Gilroy-ExtraBold;
+    font-family: Gilroy-Bold;
     color: var(--black-color);
     font-size: 18px;
     line-height: 22px;
@@ -36,8 +37,7 @@ nav{
 
 p{
     margin-top: 18px;
-    font-family: Gilroy-Light;
-    font-weight: 700;
+    font-family: Gilroy-Medium;
     line-height: 22px;
 
 }
@@ -45,7 +45,7 @@ h1{
     font-size: 34px;
     line-height: 42px;
 
-    font-family: Gilroy-ExtraBold;
+    font-family: Gilroy-Bold;
 }
 .container{
 
@@ -58,21 +58,20 @@ h1{
     justify-content: space-between;
 }
 .container .bio .languages{
-    font-family: Gilroy-ExtraBold;
+    font-family: Gilroy-Bold;
     writing-mode: vertical-rl;
     transform:  rotate(-180deg);
 }
 
 .container .bio .name{
-    font-family: Gilroy-ExtraBold;
+    font-family: Gilroy-Bold;
     font-size: 47px;
     line-height: 59px;
 }
 .container .bio .vocation{
     display: flex;
     align-items: center;
-    font-family: Gilroy-Light;
-    font-weight: 700;
+    font-family: Gilroy-Medium;
     font-size: 18px;
     line-height: 22px;
 }
@@ -86,7 +85,6 @@ h1{
     background-image: url("img/profile-photo.png");
 }
 main{
-
     text-align: center;
     margin-top: 104px;
 }
@@ -102,8 +100,7 @@ main .about-me h1{
 }
 main .about-me p{
     margin-top: 18px;
-    font-family: Gilroy-Light;
-    font-weight: 700;
+    font-family: Gilroy-Medium;
     line-height: 22px;
 
 }
@@ -124,15 +121,35 @@ main .programs-container{
 main .programs-container p{
     margin-top: 23px;
     margin-bottom: 41px;
-    font-family: Gilroy-Light;
-    font-weight: bold;
+    font-family: Gilroy-Medium;
     color: #828282;
 }
 
-main .programs-container .rate{
-    font-size: 20px;
+main .programs-container .rating{
+    display: flex;
+    margin-bottom: 111px;
+
+}
+.star{
+    margin: 0 9px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 26px;
+    height: 26px;
+    background-image: url(img/star.svg);
+}
+.filled-star{
+    margin: 0 9px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 26px;
+    height: 26px;
+    background-image: url(img/filled-star.svg);
 }
 .program-icon{
+    margin: auto;
     padding: 1px;
     height: 89px;
     width: 89px;
@@ -175,3 +192,90 @@ main .programs-container .rate{
     background-image:url("img/figma.svg");
 }
 
+main .portfolio-container{
+    background-color: #F6F6F6;
+}
+main .portfolio-container h1{
+    padding-top: 112px;
+}
+
+main .portfolio-container .project-container .link{
+    padding: 44px 0 99px 0;
+}
+
+main .portfolio-container .project-container .link a{
+    font-family: Gilroy-Medium;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--black-color);
+}
+
+.image{
+    margin: auto;
+    width: 936px;
+    height: 522px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.one{
+    background-image: url("img/work-1.png");
+
+}
+.two{
+    background-image: url("img/work-2.png");
+
+}
+.three{
+    background-image: url("img/work-3.png");
+
+}
+
+
+footer h1{
+    margin: 120px auto 20px auto;
+}
+footer button{
+    margin: 29px auto 85px auto;
+    font-family: Gilroy-Bold;
+    font-size: 18px;
+    line-height: 22px;
+    text-decoration: none;
+    display: inline-block;
+    width: 180px;
+    height: 42px;
+    border: none;
+    background:var(--black-color);
+    color:#fff;
+    border-radius: 20px;
+}
+footer .social-links {
+    display: flex;
+    justify-content:center;
+}
+footer .social-links .link{
+    margin: 0 30px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+footer .social-links .linkedin{
+    background-image: url(img/linkedin.svg);
+}
+footer .social-links .instagram{
+    background-image: url(img/instagram.svg);
+}
+footer .social-links .behance{
+    background-image: url(img/behance.svg);
+}
+footer .social-links .dribble{
+    background-image: url(img/dribble.svg);
+}
+footer p{
+    padding-bottom: 123px;
+    color:#828282;
+    margin-top: 45px;
+}
