@@ -1,0 +1,177 @@
+@font-face {
+    font-family: Gilroy-Light;
+    src: url("fonts/Gilroy-Light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Gilroy-ExtraBold;
+    font-weight: bold;
+    src: url("fonts/Gilroy-ExtraBold.otf") format("opentype");
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --black-color: #70707;
+  }
+header{
+    padding: 0 200px;
+}
+nav a{
+    font-family: Gilroy-ExtraBold;
+    color: var(--black-color);
+    font-size: 18px;
+    line-height: 22px;
+    text-decoration: none;
+    padding-bottom: 20px;
+}
+
+nav{
+    margin-top: 33px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #828282;
+}
+
+p{
+    margin-top: 18px;
+    font-family: Gilroy-Light;
+    font-weight: 700;
+    line-height: 22px;
+
+}
+h1{
+    font-size: 34px;
+    line-height: 42px;
+
+    font-family: Gilroy-ExtraBold;
+}
+.container{
+
+    color: var(--black-color);
+    margin-top: 40px;
+}
+.container .bio{
+
+    display: flex;
+    justify-content: space-between;
+}
+.container .bio .languages{
+    font-family: Gilroy-ExtraBold;
+    writing-mode: vertical-rl;
+    transform:  rotate(-180deg);
+}
+
+.container .bio .name{
+    font-family: Gilroy-ExtraBold;
+    font-size: 47px;
+    line-height: 59px;
+}
+.container .bio .vocation{
+    display: flex;
+    align-items: center;
+    font-family: Gilroy-Light;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+}
+.container .profile-photo{
+    margin-top: 54px;
+    height: 387px;
+    width: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("img/profile-photo.png");
+}
+main{
+
+    text-align: center;
+    margin-top: 104px;
+}
+
+main .about-me{
+    padding-bottom: 107px;
+    text-align: center;
+    background-color: #F6F6F6;
+}
+
+main .about-me h1{
+    padding-top: 120px;
+}
+main .about-me p{
+    margin-top: 18px;
+    font-family: Gilroy-Light;
+    font-weight: 700;
+    line-height: 22px;
+
+}
+main .skills{
+    padding: 0 200px;
+}
+main .skills h1{
+    margin-top: 90px;
+}
+main .skills p{
+    margin-top: 70px;
+}
+main .programs-container{
+    margin-top: 88px;
+    display: flex;
+    justify-content: space-between;
+}
+main .programs-container p{
+    margin-top: 23px;
+    margin-bottom: 41px;
+    font-family: Gilroy-Light;
+    font-weight: bold;
+    color: #828282;
+}
+
+main .programs-container .rate{
+    font-size: 20px;
+}
+.program-icon{
+    padding: 1px;
+    height: 89px;
+    width: 89px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.inner-svg{
+    height: 100%;   
+    position: relative;
+    z-index:-1;
+}
+.photoshop .program-icon{
+    background-image:url("img/photoshop.svg");
+}
+.photoshop .inner-svg{
+    background: radial-gradient(75.99% 75.64% at 32.94% 22.44%, rgba(52, 54, 78, 0.98) 0%, #0C0824 100%);
+}
+
+.illustrator .program-icon{
+    background-image:url("img/illustrator.svg");
+}
+.illustrator .inner-svg{ 
+    background: radial-gradient(76% 75.63% at 32.97% 22.44%, rgba(66, 51, 37, 0.98) 0%, #1C0A00 100%);
+}
+.after-effects .program-icon{
+    background-image:url("img/after-effects.svg");
+}
+.after-effects .inner-svg{
+  
+    background: radial-gradient(76% 75.63% at 32.97% 22.42%, rgba(68, 47, 85, 0.98) 0%, #12002C 100%);
+}
+.figma p{
+    padding-bottom: 20px;
+}
+.figma .program-icon{
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image:url("img/figma.svg");
+}
+
