@@ -9,15 +9,18 @@
     src: url("fonts/Gilroy-bold.woff2") format("woff2");
 }
 *{
+    box-sizing: border-box;
     text-align: center;
     margin: 0;
     padding: 0;
+    border: 0;
 }
 :root {
     --black-color: #070707;;
   }
 header{
-    padding: 0 200px;
+    margin: 32px auto 100px; /*top  right/left  bottom */
+    max-width: 940px;
 }
 nav a{
     font-family: Gilroy-Bold;
@@ -36,24 +39,21 @@ nav{
 }
 
 p{
-    margin-top: 18px;
     font-family: Gilroy-Medium;
     line-height: 22px;
-
+    font-size: 18px;
 }
-h1{
+h2{
     font-size: 34px;
     line-height: 42px;
 
     font-family: Gilroy-Bold;
 }
 .container{
-
     color: var(--black-color);
     margin-top: 40px;
 }
 .container .bio{
-
     display: flex;
     justify-content: space-between;
 }
@@ -76,29 +76,23 @@ h1{
     line-height: 22px;
 }
 .container .profile-photo{
-    margin-top: 54px;
+   /**/ margin-top: 54px;
     height: 390px;
     width: auto;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url("img/profile-photo.png");
-}
-main{
-    text-align: center;
-    margin-top: 100px;
+    max-width: 940px;
+
 }
 
 main .about-me{
-    padding-bottom: 110px;
-    text-align: center;
+    height: 500px;
     background-color: #F6F6F6;
 }
-
-main .about-me h1{
+main .about-me h2{
     padding-top: 120px;
 }
-
+main .about-me p{
+    margin:18px auto 44px;
+}
 main .skills{
     padding: 90px 0px 110px;
 }
@@ -106,12 +100,12 @@ main .skills p{
     margin-top: 70px;
 }
 main .programs-container{
-    margin-top: 90px;
+    margin-top: 85px;
     display: flex;
     justify-content: center;
 }
 main .programs-container .program{
-    margin: 0 45px;
+    margin: 0 22px;
 }
 main .programs-container p{
     margin-top: 20px;
@@ -133,13 +127,7 @@ main .programs-container .rating{
     height: 26px;
     background-image: url(img/star.svg);
 }
-.filled-star{
-    margin: 0 9px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 26px;
-    height: 26px;
+.filled{
     background-image: url(img/filled-star.svg);
 }
 .program-icon{
@@ -189,7 +177,7 @@ main .portfolio-container{
     padding-top: 110px;
     background-color: #F6F6F6;
 }
-main .portfolio-container h1{
+main .portfolio-container h2{
     margin-bottom: 46px;
 }
 
@@ -206,7 +194,7 @@ main .portfolio-container .project-container .link a{
 
 .image{
     margin: auto;
-    width: 950px;
+    /* width: 950px; */
     height: 500px;
     background-size: contain;
     background-position: center;
@@ -226,7 +214,7 @@ main .portfolio-container .project-container .link a{
 }
 
 
-footer h1{
+footer h2{
     margin: 120px auto 20px auto;
 }
 footer button{
