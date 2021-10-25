@@ -19,7 +19,7 @@
     --black-color: #070707;;
   }
 header{
-    margin: 32px auto 100px; /*top  right/left  bottom */
+    margin: auto auto 100px; /*top  right/left  bottom */
     max-width: 940px;
 }
 nav a{
@@ -28,11 +28,10 @@ nav a{
     font-size: 18px;
     line-height: 22px;
     text-decoration: none;
-    padding-bottom: 20px;
+    padding: 32px 0;
 }
 
 nav{
-    margin-top: 32px;
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #828282;
@@ -80,6 +79,10 @@ h2{
     height: 390px;
     width: auto;
     max-width: 940px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(img/profile-photo.png);
 
 }
 
@@ -114,9 +117,36 @@ main .programs-container p{
     color: #828282;
 }
 
+@media only screen and (max-width: 1024px) {
+    header{
+        margin: auto 20px 100px;
+    }
+    nav a{
+        padding: 20px 0;
+    }
+    main .programs-container{
+        margin-top: 85px;
+        display: grid;
+        grid-template-columns: 42% 42%;
+        row-gap: 60px;
+    }
+    .star{
+        margin: auto;
+    }
+    main .image.one,
+    main .image.two,
+    main .image.three{
+        margin: auto 20px;
+        min-height: inherit;
+        height: 50vw;
+    }
+
+}
+
+
 main .programs-container .rating{
     display: flex;
-
+    justify-content: center;
 }
 .star{
     margin: 0 9px;
@@ -192,23 +222,22 @@ main .portfolio-container .project-container .link a{
     color: var(--black-color);
 }
 
-.image{
+main .image{
     margin: auto;
-    /* width: 950px; */
-    height: 500px;
+    min-height: 500px;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
 }
-.one{
+main .image.one{
     background-image: url("img/work-1.png");
 
 }
-.two{
+main .image.two{
     background-image: url("img/work-2.png");
 
 }
-.three{
+main .image.three{
     background-image: url("img/work-3.png");
 
 }
