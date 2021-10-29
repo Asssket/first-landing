@@ -130,8 +130,9 @@ main .programs-container p{
         grid-template-columns: 42% 42%;
         row-gap: 60px;
     }
-    .star{
-        margin: auto;
+    div.star
+    {
+        margin: 0 3px;
     }
     main .image.one,
     main .image.two,
