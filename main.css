@@ -9,15 +9,18 @@
     src: url("fonts/Gilroy-bold.woff2") format("woff2");
 }
 *{
+    box-sizing: border-box;
     text-align: center;
     margin: 0;
     padding: 0;
+    border: 0;
 }
 :root {
     --black-color: #070707;;
   }
 header{
-    padding: 0 200px;
+    margin: auto auto 100px; /*top  right/left  bottom */
+    max-width: 940px;
 }
 nav a{
     font-family: Gilroy-Bold;
@@ -25,35 +28,31 @@ nav a{
     font-size: 18px;
     line-height: 22px;
     text-decoration: none;
-    padding-bottom: 20px;
+    padding: 32px 0;
 }
 
 nav{
-    margin-top: 32px;
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #828282;
 }
 
 p{
-    margin-top: 18px;
     font-family: Gilroy-Medium;
     line-height: 22px;
-
+    font-size: 18px;
 }
-h1{
+h2{
     font-size: 34px;
     line-height: 42px;
 
     font-family: Gilroy-Bold;
 }
 .container{
-
     color: var(--black-color);
     margin-top: 40px;
 }
 .container .bio{
-
     display: flex;
     justify-content: space-between;
 }
@@ -76,29 +75,27 @@ h1{
     line-height: 22px;
 }
 .container .profile-photo{
-    margin-top: 54px;
+   /**/ margin-top: 54px;
     height: 390px;
     width: auto;
-    background-size: contain;
+    max-width: 940px;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url("img/profile-photo.png");
-}
-main{
-    text-align: center;
-    margin-top: 100px;
+    background-image: url(img/profile-photo.png);
+
 }
 
 main .about-me{
-    padding-bottom: 110px;
-    text-align: center;
+    height: 500px;
     background-color: #F6F6F6;
 }
-
-main .about-me h1{
+main .about-me h2{
     padding-top: 120px;
 }
-
+main .about-me p{
+    margin:18px auto 44px;
+}
 main .skills{
     padding: 90px 0px 110px;
 }
@@ -106,12 +103,12 @@ main .skills p{
     margin-top: 70px;
 }
 main .programs-container{
-    margin-top: 90px;
+    margin-top: 85px;
     display: flex;
     justify-content: center;
 }
 main .programs-container .program{
-    margin: 0 45px;
+    margin: 0 22px;
 }
 main .programs-container p{
     margin-top: 20px;
@@ -120,9 +117,37 @@ main .programs-container p{
     color: #828282;
 }
 
+@media only screen and (max-width: 1024px) {
+    header{
+        margin: auto 20px 100px;
+    }
+    nav a{
+        padding: 20px 0;
+    }
+    main .programs-container{
+        margin-top: 85px;
+        display: grid;
+        grid-template-columns: 42% 42%;
+        row-gap: 60px;
+    }
+    div.star
+    {
+        margin: 0 3px;
+    }
+    main .image.one,
+    main .image.two,
+    main .image.three{
+        margin: auto 20px;
+        min-height: inherit;
+        height: 50vw;
+    }
+
+}
+
+
 main .programs-container .rating{
     display: flex;
-
+    justify-content: center;
 }
 .star{
     margin: 0 9px;
@@ -133,13 +158,7 @@ main .programs-container .rating{
     height: 26px;
     background-image: url(img/star.svg);
 }
-.filled-star{
-    margin: 0 9px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 26px;
-    height: 26px;
+.filled{
     background-image: url(img/filled-star.svg);
 }
 .program-icon{
@@ -189,7 +208,7 @@ main .portfolio-container{
     padding-top: 110px;
     background-color: #F6F6F6;
 }
-main .portfolio-container h1{
+main .portfolio-container h2{
     margin-bottom: 46px;
 }
 
@@ -204,29 +223,28 @@ main .portfolio-container .project-container .link a{
     color: var(--black-color);
 }
 
-.image{
+main .image{
     margin: auto;
-    width: 950px;
-    height: 500px;
+    min-height: 500px;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
 }
-.one{
+main .image.one{
     background-image: url("img/work-1.png");
 
 }
-.two{
+main .image.two{
     background-image: url("img/work-2.png");
 
 }
-.three{
+main .image.three{
     background-image: url("img/work-3.png");
 
 }
 
 
-footer h1{
+footer h2{
     margin: 120px auto 20px auto;
 }
 footer button{
