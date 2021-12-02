@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "set NODE_ENV=development&&webpack serve --open",
     "dev": "set NODE_ENV=development&&webpack",
-    "build": "set NODE_ENV=production&&webpack"
+    "build": "set NODE_ENV=production&&webpack",
+    "push-src": "node ./scripts/push-src.js",
+    "build-deploy": "node ./scripts/build-deploy.js"
   },
   "repository": {
     "type": "git",
